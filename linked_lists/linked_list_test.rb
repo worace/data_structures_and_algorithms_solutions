@@ -15,7 +15,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_pushes_three_elements_onto_a_list
-    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -23,7 +22,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_pops_the_last_element_from_the_list
-    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -33,27 +31,23 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_a_popped_element_is_removed
-    skip
     list.push("hello")
     output = list.pop
     assert_equal "hello", output
     assert_equal 0, list.count
-  end  
+  end
 
   def test_it_pops_nil_when_there_are_no_elements
-    skip
     assert_nil list.pop
   end
 
   def test_it_deletes_a_solo_node
-    skip
     list.push("hello")
     list.delete("hello")
     assert_equal 0, list.count
   end
 
   def test_it_does_not_delete_when_the_data_does_not_match
-    skip
     list.push("hello")
     list.push("world")
     list.delete("today")
@@ -61,7 +55,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_deletes_a_last_node
-    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -70,7 +63,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_deletes_a_middle_node
-    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -81,7 +73,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_deletes_the_head_when_there_are_more_nodes
-    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -92,12 +83,10 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_converts_to_an_array_when_there_are_no_elements
-    skip
     assert_equal [], list.to_a
   end
 
   def test_it_converts_to_an_array_with_several_elements
-    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -105,7 +94,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_finds_the_last_node
-    skip
     list.push("hello")
     list.push("world")
     node = list.last_node
